@@ -1,0 +1,23 @@
+{
+    "dataset_path": "../Data/south_building_small/",
+    "run_headless": true,
+    "write_ground_truth_camera_poses": true,
+    "ground_truth_poses_scale_type": 2, 
+    "ground_truth_poses_scale_factor": -1.0, 
+    "feature_match_ratio_threshold": 0.70, 
+    "frame_interval": 1,
+    "dataset_has_depth": false,
+    "dataset_has_ground_truth_trajectory": true,
+    "camera_type": "colmap_640_480", 
+    "num_frames": 50,
+    "blurry_threshold": 1.1,
+    "num_features_to_detect": -1,
+    "min_reprojection_error_threshold": 2.0, 
+    "reprojection_error_max_std_devs": 2.0,
+    "run_local_bundle_adjustment": false,
+    "run_global_bundle_adjustment": false,
+    "filter_if_not_seen": true,
+    "filter_if_not_seen_n_times": 3,
+    "filter_if_not_seen_n_times_in_m_frames": 4,
+    "loss_function_type": "CAUCHY"
+}

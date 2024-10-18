@@ -1,0 +1,16 @@
+{
+    "image": "3dsmc",
+    "forwardPorts": [3000],
+    "customizations": {
+      // Configure properties specific to VS Code.
+      "vscode": {
+        // Add the IDs of extensions you want installed when the container is created.
+        "extensions": [
+          "ms-vscode.cpptools",
+          "twxs.cmake",
+          "ms-vscode.cmake-tools",
+          "llvm-vs-code-extensions.vscode-clangd"
+        ]
+      }
+    }
+  }

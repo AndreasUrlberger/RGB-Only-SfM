@@ -1,0 +1,27 @@
+name: CMake Build and Run
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+          image: ghcr.io/3dsmc/3dsmc-project:latest
+          
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: recursive
+    - run: wget https://cvg.cit.tum.de/rgbd/dataset/freiburg1/rgbd_dataset_freiburg1_xyz.tgz
+    - run: tar -xf rgbd_dataset_freiburg1_xyz.tgz -C Data/
+    - run: mkdir build && cd build && cmake .. && make -j4
+    - run: cd build && CONFIG_PATH=../resources/config/config.json ./3dsmc_project
+    - uses: actions/upload-artifact@v4
+      with:
+        name: keypoints-image
+        path: build/out.png
+        retention-days: 1
