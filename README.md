@@ -19,13 +19,6 @@ Use the provided Docker image in ```dockerfiles/Dockerfile```.
 2. Ensure you are using latest Docker image (requires GTK and OpenCV)
 3. Ensure `run_headless` set to `false` in OpenCV config
 
-## DevContainer (local development)
-
-TODO:
-
-## Github Codespaces (remote development)
-
-TODO:
 
 ## Github CI/CD
 
